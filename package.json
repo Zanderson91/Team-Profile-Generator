@@ -1,0 +1,22 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "This is a repo containing the team-profile-generator",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zanderson91/Team-Profile-Generator.git"
+  },
+  "author": "Zack Anderson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zanderson91/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/Zanderson91/Team-Profile-Generator#readme"
+}
