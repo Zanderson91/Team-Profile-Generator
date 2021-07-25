@@ -22,3 +22,6 @@ describe("Employee class", () => {
                 const employee = new Employee('Zack', 1, email);
                 expect(employee.email).toBe(email);
             })
+        })
+
+        // add it role?
