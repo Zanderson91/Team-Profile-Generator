@@ -110,4 +110,17 @@ const writeFile = (data) => {
             console.log("Thank you, your team has been created!");
         }
     });
-}
+};
+
+//need to initialize addManager function to write to teamArray
+addManager()
+    .then(addEmployee)
+    .then((teamArray) => {
+        return generateCards(teamArray);
+    })
+    .then((html) => {
+        return writeFile(html);
+    })
+    .catch((err) => {
+        console.log(err);
+    });
