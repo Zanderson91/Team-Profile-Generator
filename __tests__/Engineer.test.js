@@ -3,7 +3,7 @@ const Engineer = require("../lib/Engineer");
 describe("Engineer class", () => {
     it("can be instantiated", () => {
         const engineer = new Engineer();
-        expect(typeof employee).toBe("object");
+        expect(typeof engineer).toBe("object");
         expect(engineer instanceof Engineer).toBe(true);
     });
 
@@ -18,20 +18,19 @@ describe("Engineer class", () => {
     })
 
     it('should have an email property that can be set on instanstiation', () => {
-        const email = "zack.anderson2011@gmail.com"
+        const email = "zack.anderson2011@gmail.com";
         const engineer = new Engineer('Zack', 1, email);
         expect(engineer.email).toBe(email);
     })
 
     it('should have a Github property that can be set on instanstiation', () => {
-        const github = "Zanderson91"
-        const engineer = new Engineer('Zack', 1, email);
+        const github = 'Zanderson91';
+        const engineer = new Engineer('Zack', 1 , github);
         expect(engineer.github).toBe(github);
     })
 
     it('should list role as Engineer', () => {
-        const email = "zack.anderson2011@gmail.com"
-        const engineer = new Engineer('Zack', 1, email);
+        const engineer = new Engineer('Zack');
         expect(engineer.getRole()).toBe("Engineer");
     })
 })
