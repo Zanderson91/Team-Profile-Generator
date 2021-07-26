@@ -61,4 +61,15 @@ const addEmployee = () => {
                         type: "message",
                         message: "What is the employee's ID#?",
                         name: "id"
+                    },
+                    {
+                        type: "message",
+                        message: "What is the employee's email address?",
+                        name: "email",
+                    },
+                    {
+                        when: (data) => data.role === "Engineer",
+                        type: "input",
+                        message: "What is the employee's Github username?",
+                        name: "github",
                     }
