@@ -68,13 +68,13 @@ const addEmployee = () => {
                 name: "email",
             },
             {
-                when: (this) => this.role === "Engineer",
+                when: (data) => data.role === "Engineer",
                 type: "input",
                 message: "What is the employee's Github username?",
                 name: "github",
             },
             {
-                when: (this) => this.role === "Intern",
+                when: (data) => data.role === "Intern",
                 type: "input",
                 message: "What school did the employee attend?",
                 name: "school",
