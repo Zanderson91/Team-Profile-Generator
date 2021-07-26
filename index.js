@@ -68,8 +68,28 @@ const addEmployee = () => {
                         name: "email",
                     },
                     {
-                        when: (data) => data.role === "Engineer",
+                        when: (this) => this.role === "Engineer",
                         type: "input",
                         message: "What is the employee's Github username?",
                         name: "github",
-                    }
+                    },
+                    {
+                        when: (this) => this.role === "Intern",
+                        type: "input",
+                        message: "What school did the employee attend?",
+                        name: "school",
+                    },
+                ])
+                .then((employeeResponse) => {
+                    let {name, id, email, role, github ,school} = employeeResponse
+                    let employee;
+
+                if(role === "Engineer") {
+                    employee = new Engineer(name, id, email, github);
+                } else if(role === "Intern") {
+                    employee = new Intern(name, id, email, school);
+                }
+                teamArray.push(employee);
+            });
+        }
+                
