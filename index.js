@@ -45,51 +45,69 @@ const addManager = () => {
 
 //employee prompts now needed for the additional employees.
 const addEmployee = () => {
-        return inquirer
-            .prompt([{
-                        type: "list",
-                        message: "Please select your employee's role.",
-                        choices: ["Engineer", "Intern"],
-                        name: "role",
-                    },
-                    {
-                        type: "message",
-                        message: "What is the employee's name?",
-                        name: "name",
-                    },
-                    {
-                        type: "message",
-                        message: "What is the employee's ID#?",
-                        name: "id"
-                    },
-                    {
-                        type: "message",
-                        message: "What is the employee's email address?",
-                        name: "email",
-                    },
-                    {
-                        when: (this) => this.role === "Engineer",
-                        type: "input",
-                        message: "What is the employee's Github username?",
-                        name: "github",
-                    },
-                    {
-                        when: (this) => this.role === "Intern",
-                        type: "input",
-                        message: "What school did the employee attend?",
-                        name: "school",
-                    },
-                ])
-                .then((employeeResponse) => {
-                    let {name, id, email, role, github ,school} = employeeResponse
-                    let employee;
+    return inquirer
+        .prompt([{
+                type: "list",
+                message: "Please select your employee's role.",
+                choices: ["Engineer", "Intern"],
+                name: "role",
+            },
+            {
+                type: "message",
+                message: "What is the employee's name?",
+                name: "name",
+            },
+            {
+                type: "message",
+                message: "What is the employee's ID#?",
+                name: "id"
+            },
+            {
+                type: "message",
+                message: "What is the employee's email address?",
+                name: "email",
+            },
+            {
+                when: (this) => this.role === "Engineer",
+                type: "input",
+                message: "What is the employee's Github username?",
+                name: "github",
+            },
+            {
+                when: (this) => this.role === "Intern",
+                type: "input",
+                message: "What school did the employee attend?",
+                name: "school",
+            },
+        ])
+        .then((employeeResponse) => {
+            let {
+                name,
+                id,
+                email,
+                role,
+                github,
+                school
+            } = employeeResponse
+            let employee;
 
-                if(role === "Engineer") {
-                    employee = new Engineer(name, id, email, github);
-                } else if(role === "Intern") {
-                    employee = new Intern(name, id, email, school);
-                }
-                teamArray.push(employee);
-            });
+            if (role === "Engineer") {
+                employee = new Engineer(name, id, email, github);
+            } else if (role === "Intern") {
+                employee = new Intern(name, id, email, school);
+            }
+            teamArray.push(employee);
+        });
+}
+
+//initialize write to HTML
+const writeFile = (data) => {
+    fs.writeFile("./dist/index.html", data, (err) => {
+        if (err) {
+            console.log(err);
+            return;
+        } else {
+            console.log("Thank you, your team has been created!");
         }
-                
+    });
+}
