@@ -8,6 +8,7 @@ function generateManager(manager) {
     <li class = "list-group-item m-2" >ID: ${manager.id} </li>
     <li class = "list-group-item m-2">Email: <a href = "mailto:${manager.email}" > ${manager.email}</a></li >
     <li class = "list-group-item m-2"> Office: ${manager.officeNumber} </li> </ul> 
+    </div>
     </div>`
 };
 
@@ -20,6 +21,7 @@ function generateEngineer(engineer) {
     <li class = "list-group-item m-2" >ID: ${engineer.id} </li>
     <li class = "list-group-item m-2">Email: <a href = "mailto:${engineer.email}" > ${engineer.email}</a></li >
     <li class = "list-group-item m-2">Github: ${engineer.github} </li> </ul> 
+    </div>
     </div>`
 };
 
@@ -33,6 +35,8 @@ function generateIntern(intern) {
     <li class = "list-group-item m-2" >ID: ${intern.id} </li>
     <li class = "list-group-item m-2">Email: <a href = "mailto:${intern.email}" > ${intern.email}</a></li >
     <li class = "list-group-item m-2"> School: ${intern.school} </li> </ul> 
+    </div>
+    </div>
     </div>`
 };
 
