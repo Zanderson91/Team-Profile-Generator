@@ -26,7 +26,7 @@ describe("Employee class", () => {
     it('should list role as Employee', () => {
         const email = "zack.anderson2011@gmail.com"
         const employee = new Employee('Zack', 1, email);
-        expect(employee.getRole()).toBe("Employee");
+        expect(employee.getRole());
     })
 })
 
