@@ -36,7 +36,8 @@ const addManager = () => {
                 name,
                 id,
                 email,
-                officeNumber
+                officeNumber,
+                role,
             } = managerResponse;
             const manager = new Manager(name, id, email, officeNumber);
             teamArray.push(manager);
