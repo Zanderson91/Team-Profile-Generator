@@ -13,7 +13,7 @@
 
   ![Gif of project](./assets/Team%20Generator%20gif.gif)
   
-	https://drive.google.com/file/d/1hH9A4j1x5ng1ctZxKLpISOWp4V5fjU42/view
+https://drive.google.com/file/d/1hH9A4j1x5ng1ctZxKLpISOWp4V5fjU42/view
 	
   # Table of Contents
   - [Description](#Description)
