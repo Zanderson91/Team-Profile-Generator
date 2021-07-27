@@ -28,7 +28,7 @@ const addManager = () => {
             {
                 type: "input",
                 message: "What is your office #?",
-                name: "email",
+                name: "officeNumber",
             },
         ])
         .then((managerResponse) => {
@@ -37,7 +37,6 @@ const addManager = () => {
                 id,
                 email,
                 officeNumber,
-                role,
             } = managerResponse;
             const manager = new Manager(name, id, email, officeNumber);
             teamArray.push(manager);
