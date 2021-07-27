@@ -11,6 +11,8 @@
   # Description
   This generator allows the user to build an html page that includes information given for each member of the team from the command line.
 
+  [Gif of project](assets/Team%20Generator%20gif.gif)
+
   # Table of Contents
   - [Description](#Description)
   - [Installation](#Installation)
