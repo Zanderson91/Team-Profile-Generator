@@ -79,6 +79,12 @@ const addEmployee = () => {
                 message: "What school did the employee attend?",
                 name: "school",
             },
+            {
+                type: "confirm",
+                message: "Would you like to add more employees to your team?",
+                default: false,
+                name: "confirmEmployee",
+            },
         ])
         .then((employeeResponse) => {
             let {
@@ -87,9 +93,9 @@ const addEmployee = () => {
                 email,
                 role,
                 github,
-                school
+                school,
+                confirmEmployee
             } = employeeResponse
-            let employee;
 
             if (role === "Engineer") {
                 employee = new Engineer(name, id, email, github);
@@ -97,6 +103,12 @@ const addEmployee = () => {
                 employee = new Intern(name, id, email, school);
             }
             teamArray.push(employee);
+
+            if (confirmEmployee) {
+                return addEmployee(teamArray);
+            } else {
+                return teamArray;
+            }
         });
 }
 

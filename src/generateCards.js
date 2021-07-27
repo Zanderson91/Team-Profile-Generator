@@ -1,7 +1,9 @@
 function generateManager(manager) {
   return `
+              <div class="row justify-content-center">
+                <div class="col-sm-2">
   <div class = "card text-white bg-dark style = "width: 20rem ">
-  <div class = "card-header mt-3 mb-3">Name: ${manager.name}</div>
+  <div class = "card-header mt-3 mb-3">Name: ${manager.name.role}</div>
   <ul class = "list-group list-group-flush" >
     <li class = "list-group-item m-2" >ID: ${manager.id} </li>
     <li class = "list-group-item m-2">Email: <a href = "mailto:${manager.email}" > ${manager.email}</a></li >
@@ -11,6 +13,7 @@ function generateManager(manager) {
 
 function generateEngineer(engineer) {
   return `
+                <div class="col-sm-2">
   <div class = "card text-white bg-dark style = "width: 20rem ">
   <div class = "card-header mt-3 mb-3">Name: ${engineer.name}</div>
   <ul class = "list-group list-group-flush" >
@@ -22,6 +25,8 @@ function generateEngineer(engineer) {
 
 function generateIntern(intern) {
   return `
+
+                <div class="col-sm-2">
   <div class = "card text-white bg-dark style = "width: 20rem ">
   <div class = "card-header mt-3 mb-3">Name: ${intern.name}</div>
   <ul class = "list-group list-group-flush" >
@@ -85,46 +90,6 @@ function generateTeamPage(employeeCards) {
 
         <main>
 ${employeeCards}
-            <div class="row justify-content-center">
-                <div class="col-sm-2">
-                    <div class="card text-white bg-dark" style="width: 20
-                            rem">
-                        <div class="card-header mt-3 mb-3">Manger: </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item m-2"> ID: </li>
-                            <li class="list-group-item m-2">Email: <a href="mailto:">
-                                    </a></li>
-                            <li class="list-group-item m-2">Office Phone:
-                                </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="card text-white bg-dark" style="width: 20
-                            rem">
-                        <div class="card-header mt-3 mb-3">Engineer:</div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item m-2"> ID: </li>
-                            <li class="list-group-item m-2">Email: <a href="mailto:">
-                                    </a></li>
-                            <li class="list-group-item m-2">Github:
-                                </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-2">
-                    <div class="card text-white bg-dark" style="width: 20
-                            rem">
-                        <div class="card-header mt-3 mb-3">Intern: </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item m-2"> ID: </li>
-                            <li class="list-group-item m-2">Email: <a href="mailto:"></a></li>
-                            <li class="list-group-item m-2">School:
-                                </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </main>
         <script src="../index.js"></script>
     </body>
